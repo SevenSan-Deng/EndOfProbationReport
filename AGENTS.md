@@ -18,7 +18,8 @@ When implementing from a selected generated mock, treat that image as the source
 ## Content direction
 
 - Organize the probation-period work into three categories: workbenches, tools, and training.
-- Keep the verified workbench set as customer service automation, SEO control, and the Chuntian Fresh operations middle platform.
+- Keep the verified workbench set as customer service automation, SEO control, the Chuntian Fresh operations middle platform, and the branch social-operations data dashboard.
+- Present the branch dashboard around its mother-and-baby social-commerce context, covering customer, promotion-slot, product, and operating-infrastructure data such as phone cards.
 - Keep the verified tool set as Zhaozhao recruiting robot, performance-sheet workflow, traffic-data V1.2, OCPX RPA, Taobao code RPA, Meituan campaign middle platform RPA, and Meituan-to-Feishu Base RPA.
 - Present Obsidian and WorkBuddy as one training and knowledge-management system.
 - Every project should foreground its name, serving department, achieved outcome, and a verified metric. Show company-wide coverage as a percentage only after a reliable organizational denominator is available.

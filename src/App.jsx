@@ -42,7 +42,7 @@ const navItems = [
 ];
 
 const headlineMetrics = [
-  { value: "3", label: "个业务工作台", note: "客服、SEO、春田鲜生" },
+  { value: "4", label: "个业务工作台", note: "客服、SEO、春田鲜生、分公司" },
   { value: "7", label: "项专项工具", note: "覆盖招聘、绩效、运营与投流" },
   { value: "7", label: "个部门 / 业务单元", note: "已有交付、支持或培训记录" },
   { value: "1", label: "套培训赋能体系", note: "Obsidian 知识管理 + WorkBuddy 实操" },
@@ -54,7 +54,7 @@ const departments = [
   { name: "平台运营部", work: "业务自动化", detail: "密令、活动录入、SEO" },
   { name: "投流 / 社群运营中心", work: "投流数据", detail: "OCPX 与整点数据抓取" },
   { name: "春田鲜生", work: "经营数据中台", detail: "用户、内容、客服、产品运营" },
-  { name: "分公司", work: "数据看板", detail: "客户、商品、推广位及培训" },
+  { name: "分公司", work: "社群运营数据看板", detail: "客户、推广位、商品及运营基建" },
   { name: "AI 小组", work: "知识协作", detail: "Obsidian 与 WorkBuddy" },
 ];
 
@@ -99,6 +99,20 @@ const workbenches = [
       "集中展示用户、内容、客服售后和产品运营数据，减少在分散 Excel 表格中查找和汇总。",
       "支持自动获取有赞与客户数据，并通过飞书每日播报，帮助团队及时掌握经营情况。",
       "统一查看数据与任务运行情况，关键问题有明确提示，方便后续跟进和优化。",
+    ],
+  },
+  {
+    name: "分公司社群运营数据看板",
+    department: "分公司 / 社群运营",
+    status: "持续完善",
+    icon: ChartBar,
+    summary:
+      "围绕母婴产品销售场景，集中管理客户、推广位、商品和电话卡等运营基础数据，为社群运营提供统一的数据查看入口。",
+    metrics: ["覆盖 4 类核心数据", "客户与推广位统一查看", "商品与运营基建集中管理"],
+    outcomes: [
+      "将客户、推广位、商品及电话卡等资料集中到同一看板，减少在多张表格中反复查找。",
+      "帮助社群运营人员快速了解客户和推广资源情况，为销售跟进与日常运营安排提供数据支持。",
+      "商品及运营基建数据统一维护，提升信息查找效率，也让数据更新更加清晰一致。",
     ],
   },
 ];
@@ -453,7 +467,7 @@ function Work() {
           <CirclesThreePlus size={28} weight="light" aria-hidden="true" />
           <h3>工作台</h3>
         </div>
-        <p>3 个业务工作台，集中承载日常任务、业务数据和结果查看。</p>
+        <p>4 个业务工作台，集中承载日常任务、业务数据和结果查看。</p>
       </div>
       <div className="workbench-stack">
         {workbenches.map((item, index) => (
