@@ -11,6 +11,7 @@ When implementing from a selected generated mock, treat that image as the source
 - The user selected the third generated direction: a deep ink navy executive presentation with one warm amber accent.
 - The core metaphor is an organizational constellation: separate departments connected by AI workflows and converging toward measurable results.
 - The site is a linear eight-section scroll presentation. Motion should feel cinematic and polished while staying subordinate to spoken content.
+- End the hero cleanly after the report metadata. Do not insert a separate lower fold, preview strip, or repeated hero image between the cover and the results overview.
 - Every report chapter must reserve obvious, usable space for the user's final text, screenshots, diagrams, data, or photos. Visual polish must not reduce content capacity.
 - The page should read as a structured work presentation, not a personal portfolio or promotional landing page.
 

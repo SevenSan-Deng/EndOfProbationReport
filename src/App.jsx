@@ -340,13 +340,6 @@ function Hero() {
           汇报人：邓佳萁　部门：平台运营部　岗位：RPA 自动化专员　日期：[待填写]
         </motion.p>
       </motion.div>
-      <div className="hero-fold">
-        <div>
-          <p>3 个工作台，7 项工具，1 套培训体系</p>
-          <span>从单点自动化走向部门级工作方法，覆盖采集、分析、执行、协作与知识沉淀。</span>
-        </div>
-        <img src="/assets/organizational-constellation.png" alt="" aria-hidden="true" />
-      </div>
     </section>
   );
 }
