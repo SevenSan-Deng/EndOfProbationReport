@@ -45,7 +45,7 @@ const headlineMetrics = [
   { value: "3", label: "个业务工作台", note: "客服、SEO、春田鲜生" },
   { value: "7", label: "项专项工具", note: "覆盖招聘、绩效、运营与投流" },
   { value: "7", label: "个部门 / 业务单元", note: "已有交付、支持或培训记录" },
-  { value: "196", label: "项自动化测试", note: "覆盖春田鲜生中台前端、后端与脚本" },
+  { value: "1", label: "套培训赋能体系", note: "Obsidian 知识管理 + WorkBuddy 实操" },
 ];
 
 const departments = [
@@ -347,7 +347,7 @@ function Hero() {
 function Contents() {
   return (
     <section className="section contents" id="contents">
-      <SectionTitle supporting="数据来自飞书项目总文档、RPA 周报和本地项目验收记录。">
+      <SectionTitle supporting="数据来自飞书项目总文档、RPA 周报和已交付项目记录。">
         试用期成果总览
       </SectionTitle>
       <div className="metric-mosaic">

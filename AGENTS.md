@@ -23,5 +23,6 @@ When implementing from a selected generated mock, treat that image as the source
 - Present Obsidian and WorkBuddy as one training and knowledge-management system.
 - Every project should foreground its name, serving department, achieved outcome, and a verified metric. Show company-wide coverage as a percentage only after a reliable organizational denominator is available.
 - Describe project cards in business-readable language: emphasize available functions and achieved effects, and avoid implementation details or technical terminology unless they are essential to understanding the result.
+- Headline results should represent business delivery and team enablement rather than development-process statistics such as test counts.
 
 Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts/prepare-sites-build.mjs`, and `tests/sites-worker.test.mjs` intact so the same local prototype can be handed to Sites. Before a Sites handoff, run `npm run build` and `npm run test:sites`; the build must leave `dist/client/index.html`, `dist/server/index.js`, and `dist/.openai/hosting.json`.
