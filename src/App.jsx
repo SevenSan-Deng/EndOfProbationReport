@@ -21,6 +21,8 @@ import {
   useTransform,
 } from "motion/react";
 
+const assetPath = (filename) => `${import.meta.env.BASE_URL}assets/${filename}`;
+
 const chapters = [
   ["hero", "首页"],
   ["contents", "成果总览"],
@@ -200,13 +202,13 @@ const featuredCases = [
     ],
     images: [
       {
-        src: "/assets/chuntian-business-dashboard.png",
+        src: assetPath("chuntian-business-dashboard.png"),
         alt: "春田鲜生数据中台用户运营业务数据页面",
         label: "业务数据页面",
         caption: "经营指标、客户结构与成交趋势集中展示",
       },
       {
-        src: "/assets/chuntian-automation-logs.png",
+        src: assetPath("chuntian-automation-logs.png"),
         alt: "春田鲜生数据中台自动采集与运行监控页面",
         label: "自动化运行监控",
         caption: "采集任务、运行状态、重试结果与异常统一留痕",
@@ -234,13 +236,13 @@ const featuredCases = [
     ],
     images: [
       {
-        src: "/assets/seo-growth-dashboard.png",
+        src: assetPath("seo-growth-dashboard.png"),
         alt: "云瞻 SEO 控制中心增长看板总览",
         label: "SEO 控制中心总览",
         caption: "文章、收录、排名与注册贡献形成统一漏斗",
       },
       {
-        src: "/assets/seo-keyword-dashboard.png",
+        src: assetPath("seo-keyword-dashboard.png"),
         alt: "云瞻 SEO 控制中心关键词管理页面",
         label: "关键词管理页面",
         caption: "关键词排名、关联文章、阅读量与更新时间集中追踪",
@@ -410,7 +412,7 @@ function Hero() {
     <section className="hero" id="hero" ref={ref}>
       <motion.img
         className="hero-image"
-        src="/assets/organizational-constellation.png"
+        src={assetPath("organizational-constellation.png")}
         alt="多个业务部门由 AI 工作流连接，并汇聚为可衡量成果"
         style={{ y: imageY, scale: imageScale }}
         fetchPriority="high"
@@ -835,7 +837,7 @@ function Thanks() {
   return (
     <section className="thanks" id="thanks">
       <img
-        src="/assets/organizational-constellation.png"
+        src={assetPath("organizational-constellation.png")}
         alt="AI 工作流连接多个业务部门"
         loading="lazy"
       />
