@@ -8,6 +8,7 @@ When implementing from a selected generated mock, treat that image as the source
 
 ## Current design direction
 
+- Keep all future report edits, builds, and previews local-only. Do not save new Sites versions, push source updates to the Sites repository, or deploy to the hosted Site unless the user explicitly reverses this instruction.
 - The user selected the third generated direction: a deep ink navy executive presentation with one warm amber accent.
 - The core metaphor is an organizational constellation: separate departments connected by AI workflows and converging toward measurable results.
 - The site is a linear eight-section scroll presentation. Motion should feel cinematic and polished while staying subordinate to spoken content.
