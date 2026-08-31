@@ -680,14 +680,78 @@ function Growth() {
             <p>
               从“听到需求就开始做”，转变为先调研业务、整理数据与规则，再用流程图和原型图完成确认，最后进入开发、测试、反馈和持续优化。
             </p>
-            <div className="growth-notes">
-              <strong>春田鲜生数据工作台</strong>
-              <p>对方原先主要依赖 Excel，数据分散，也很难直接描述理想工作台。我先梳理表格、数据来源和使用习惯，再将零散想法转化为流程与原型，双方确认后开展开发和迭代。</p>
-              <p>由此形成项目 SOP：业务调研 → 流程梳理 → 原型确认 → 开发测试 → 反馈优化 → 文档交付。</p>
-              <strong>能力进阶与业务理解</strong>
-              <p>完成影刀 RPA Day 1—Day 17 系统学习，覆盖 Python、数据库、API、XPath、JSON、JavaScript、OCR、验证码和 Excel 进阶等专题，并主动学习公司业务体系，为后续需求分析补充业务背景。</p>
-              <strong>自动化项目治理与文档体系</strong>
-              <p>搭建部门需求管理、已有应用及自动化管理多维表格，持续维护项目状态；同步沉淀 OCPX、美团活动、淘宝密令、SEO 和客服工作台等项目文档，让自动化资产可追踪、可交接、可维护。</p>
+          </div>
+        </Reveal>
+      </div>
+
+      <div className="growth-modules">
+        <Reveal className="growth-module growth-module-featured" delay={0.04}>
+          <span className="growth-module-kicker">项目方法</span>
+          <h3>春田鲜生数据工作台</h3>
+          <p>
+            面对 Excel 数据分散、需求难以直接描述的情况，我先梳理表格、数据来源和使用习惯，再把零散想法转化为可确认的流程与原型。
+          </p>
+          <ol className="growth-flow" aria-label="项目交付流程">
+            {[
+              ["业务调研", "梳理业务目标与真实使用习惯", "right"],
+              ["流程梳理", "明确数据来源、规则与异常边界", "right"],
+              ["原型确认", "用页面原型完成方案确认", "down"],
+              ["开发测试", "开发核心功能并覆盖关键场景", "left"],
+              ["反馈优化", "根据实际使用反馈持续调整", "left"],
+              ["文档交付", "沉淀操作、版本与异常说明", null],
+            ].map(([title, description, direction], index) => (
+              <li
+                className={`growth-flow-step growth-flow-step-${index + 1}`}
+                key={title}
+              >
+                <strong>{title}</strong>
+                <span>{description}</span>
+                {direction && (
+                  <ArrowRight
+                    className={`growth-flow-arrow growth-flow-arrow-${direction}`}
+                    size={24}
+                    weight="light"
+                    aria-hidden="true"
+                  />
+                )}
+              </li>
+            ))}
+          </ol>
+        </Reveal>
+
+        <Reveal className="growth-module growth-module-capability" delay={0.1}>
+          <span className="growth-module-kicker">能力进阶</span>
+          <h3>从工具操作到组合开发</h3>
+          <p>
+            完成影刀 RPA Day 1-17 系统学习，并主动学习公司业务体系，让技术选择建立在真实业务场景之上。
+          </p>
+          <div className="growth-module-tags" aria-label="学习内容">
+            {[
+              "Python + RPA",
+              "数据库与 API",
+              "XPath / JSON / JS",
+              "OCR 与验证码",
+              "Excel 进阶",
+            ].map((item) => (
+              <span key={item}>{item}</span>
+            ))}
+          </div>
+        </Reveal>
+
+        <Reveal className="growth-module growth-module-governance" delay={0.16}>
+          <span className="growth-module-kicker">项目治理</span>
+          <h3>让自动化资产持续可用</h3>
+          <p>
+            建立需求与应用管理表，持续维护项目状态；同步沉淀 OCPX、美团活动、淘宝密令、SEO 和客服工作台等项目文档。
+          </p>
+          <div className="growth-module-proof">
+            <div>
+              <strong>2</strong>
+              <span>类管理多维表格</span>
+            </div>
+            <div>
+              <strong>5</strong>
+              <span>类核心项目文档</span>
             </div>
           </div>
         </Reveal>
