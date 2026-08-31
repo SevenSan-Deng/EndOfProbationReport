@@ -21,7 +21,8 @@ import {
   useTransform,
 } from "motion/react";
 
-const assetPath = (filename) => `${import.meta.env.BASE_URL}assets/${filename}`;
+const assetBaseUrl = import.meta.env.SSR ? "./" : import.meta.env.BASE_URL;
+const assetPath = (filename) => `${assetBaseUrl}assets/${filename}`;
 
 const chapters = [
   ["hero", "首页"],
