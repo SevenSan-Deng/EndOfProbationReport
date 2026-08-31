@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Noto Sans SC Variable";
+  src: url("./assets/noto-sans-sc-report.woff2") format("woff2-variations");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 :root {
   font-family: "Noto Sans SC Variable", "Noto Sans SC", "Microsoft YaHei", sans-serif;
   color: #f2eee5;
