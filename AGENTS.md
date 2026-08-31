@@ -12,6 +12,7 @@ When implementing from a selected generated mock, treat that image as the source
 - The core metaphor is an organizational constellation: separate departments connected by AI workflows and converging toward measurable results.
 - The site is a linear eight-section scroll presentation. Motion should feel cinematic and polished while staying subordinate to spoken content.
 - End the hero cleanly after the report metadata. Do not insert a separate lower fold, preview strip, or repeated hero image between the cover and the results overview.
+- Do not include a separate “转正结论” or “申请按期转正” section; the report should move directly from the self-development plan to the final thanks screen.
 - Keep the hero headline compact and exactly two lines: one complete sentence per line, with no wrapping inside either sentence.
 - Vertically center the complete hero copy group within the first viewport while keeping its text left-aligned.
 - Every report chapter must reserve obvious, usable space for the user's final text, screenshots, diagrams, data, or photos. Visual polish must not reduce content capacity.

@@ -986,6 +986,11 @@ a:focus-visible {
   font-weight: 560;
 }
 
+.growth-notes > strong:not(:first-child) {
+  display: block;
+  margin-top: 28px;
+}
+
 .growth-notes p {
   margin-top: 18px !important;
   color: var(--muted) !important;

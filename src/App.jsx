@@ -30,7 +30,6 @@ const chapters = [
   ["growth", "成长"],
   ["team-plan", "后期规划"],
   ["self-plan", "自身规划"],
-  ["conclusion", "转正结论"],
   ["thanks", "致谢"],
 ];
 
@@ -66,11 +65,12 @@ const workbenches = [
     status: "已上线",
     icon: UsersThree,
     summary:
-      "把售后组、平台组和周报月报任务统一到一个网页入口，支持任务发起、定时执行、进度查看和异常处理。",
-    metrics: ["覆盖 17 项自动化任务", "整合 7 个业务入口", "任务运行统一管理"],
+      "把售后组、平台组和周报月报任务统一到一个网页入口，并接入 Jira、CSRM、企微后台等业务数据。",
+    metrics: ["覆盖 17 项自动化任务", "整合 7 个业务入口", "接入 3 类业务数据源"],
     outcomes: [
-      "售后组、平台组及周报月报任务都能在同一页面使用，减少多个工具来回切换。",
-      "支持任务预约、自动排队和失败重试，减少重复操作与多人同时执行造成的冲突。",
+      "Jira、CSRM、企微后台数据可自动抓取、清洗并写入飞书多维表格，减少跨系统人工搬运。",
+      "支持排班表自动生成、员工 open_id 自动同步和周数据统计，减少人工制表与重复维护。",
+      "售后组、平台组及周报月报任务都能在同一页面使用，并支持任务预约、自动排队和失败重试。",
       "集中展示任务进度、运行结果和异常信息，出现问题时能够及时发现和处理。",
     ],
   },
@@ -114,6 +114,7 @@ const workbenches = [
       "将客户、推广位、商品及电话卡等资料集中到同一看板，减少在多张表格中反复查找。",
       "帮助社群运营人员快速了解客户和推广资源情况，为销售跟进与日常运营安排提供数据支持。",
       "商品及运营基建数据统一维护，提升信息查找效率，也让数据更新更加清晰一致。",
+      "完成业务人员使用培训，并在交付后持续收集和处理实际运行问题。",
     ],
   },
 ];
@@ -128,12 +129,12 @@ const tools = [
     metric: "简历收集、初筛与面试分析一体化",
   },
   {
-    name: "绩效表格生成工作流",
+    name: "绩效管理工具 + 报告生成工作流",
     department: "综合管理部门",
     status: "已上线",
     result:
-      "自动汇总 KPI、加减分项、否决项和任务数据，并生成格式统一的绩效表，减少逐项复制与排版时间。",
-    metric: "绩效数据整理与表格生成自动完成",
+      "绩效管理工具负责多维表格完善与高级权限配置；报告生成工作流支持按钮触发、自动读取数据生成报告、向发起人授权，并将报告链接回写至表格。",
+    metric: "绩效管理、报告生成、自动授权与链接回写",
   },
   {
     name: "投流数据自动化 V1.2",
@@ -683,6 +684,10 @@ function Growth() {
               <strong>春田鲜生数据工作台</strong>
               <p>对方原先主要依赖 Excel，数据分散，也很难直接描述理想工作台。我先梳理表格、数据来源和使用习惯，再将零散想法转化为流程与原型，双方确认后开展开发和迭代。</p>
               <p>由此形成项目 SOP：业务调研 → 流程梳理 → 原型确认 → 开发测试 → 反馈优化 → 文档交付。</p>
+              <strong>能力进阶与业务理解</strong>
+              <p>完成影刀 RPA Day 1—Day 17 系统学习，覆盖 Python、数据库、API、XPath、JSON、JavaScript、OCR、验证码和 Excel 进阶等专题，并主动学习公司业务体系，为后续需求分析补充业务背景。</p>
+              <strong>自动化项目治理与文档体系</strong>
+              <p>搭建部门需求管理、已有应用及自动化管理多维表格，持续维护项目状态；同步沉淀 OCPX、美团活动、淘宝密令、SEO 和客服工作台等项目文档，让自动化资产可追踪、可交接、可维护。</p>
             </div>
           </div>
         </Reveal>
@@ -762,51 +767,6 @@ function SelfPlan() {
   );
 }
 
-function Conclusion() {
-  const points = [
-    {
-      title: "能够独立交付",
-      text: "已独立完成春田鲜生数据中台与 SEO 控制中心，并持续承担多个部门的自动化工具建设。",
-    },
-    {
-      title: "能够连接业务与技术",
-      text: "能从分散数据和模糊需求中梳理业务流程，用原型、系统和自动化任务形成可用成果。",
-    },
-    {
-      title: "能够持续迭代",
-      text: "已认识到价值记录和结果衡量仍需加强，下一阶段将把业务采用、节省工时与运行质量纳入项目复盘。",
-    },
-  ];
-
-  return (
-    <section className="section conclusion" id="conclusion">
-      <SectionTitle supporting="基于试用期的实际交付、业务协作与成长表现，我已具备继续承担 AI 自动化岗位职责的能力。">
-        转正结论
-      </SectionTitle>
-      <div className="conclusion-layout">
-        <Reveal className="conclusion-statement">
-          <p>我的申请</p>
-          <h3>申请按期转正</h3>
-          <span>
-            转正后继续以业务结果为目标，推进现有系统稳定使用，并让每项自动化交付都有明确的价值记录。
-          </span>
-        </Reveal>
-        <div className="conclusion-points">
-          {points.map((point, index) => (
-            <Reveal className="conclusion-point" key={point.title} delay={index * 0.08}>
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <div>
-                <h3>{point.title}</h3>
-                <p>{point.text}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function Thanks() {
   return (
     <section className="thanks" id="thanks">
@@ -843,7 +803,6 @@ export function App() {
         <Growth />
         <TeamPlan />
         <SelfPlan />
-        <Conclusion />
         <Thanks />
       </main>
     </>
